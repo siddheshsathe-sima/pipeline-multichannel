@@ -15,11 +15,10 @@ This project demonstrates **SiMa.ai’s edge inferencing capability** for multi-
 This pipeline processes up to 16 video channels in parallel, enabling real-time inference on edge devices.  
 
 ### Design
-For **object detection** workloads, the pipeline includes a custom plugin called **OpenLabelConverter**, which generates metadata in the Open Label format and passes it to **OptiView** for rendering.
+For **all pipelines**, the MLA directly creates the overlay video output using simaairender.
 
-   **Preproc → MLA → BoxDecoder**
+   **Preproc → MLA → BoxDecoder → SiMaAiRender**
 
-For **pose detection**, the MLA directly creates the overlay video output without using OpenLabelConverter.
 
 ### Channel → Model Mapping
 
