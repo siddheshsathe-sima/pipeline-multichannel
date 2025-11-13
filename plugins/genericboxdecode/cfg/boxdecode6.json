@@ -1,0 +1,178 @@
+{
+  "version": 0.1,
+  "node_name": "simaai_boxdecode_helmet_1",
+  "memory": {
+    "cpu": 0,
+    "next_cpu": 0
+  },
+  "system": {
+    "out_buf_queue": 1,
+    "debug": 0,
+    "dump_data": 0
+  },
+  "buffers": {
+    "input": [
+      {
+        "name": "mla_output_tensor_2",
+        "size": 672000
+      }
+    ],
+    "output": {
+      "size": 580
+    }
+  },
+  "batch_size": 1,
+  "decode_type": "yolov9",
+  "detection_threshold": 0.6,
+  "nms_iou_threshold": 0.5,
+  "topk": 24,
+  "num_classes": 3,
+  "channel_of_interest": 0,
+  "original_width": 640,
+  "original_height": 480,
+  "num_in_tensor": 6,
+  "data_type": [
+    "INT8",
+    "INT8",
+    "INT8",
+    "INT8",
+    "INT8",
+    "INT8"
+  ],
+  "model_width": 640,
+  "model_height": 640,
+  "dq_scale": [
+    10.22493391809386,
+    10.978479297012072,
+    11.336971722130528,
+    308.60735798833895,
+    286.9346531581658,
+    276.55839077463725
+  ],
+  "dq_zp": [
+    3,
+    10,
+    9,
+    -128,
+    -128,
+    -128
+  ],
+  "input_depth": [
+    64,
+    64,
+    64,
+    3,
+    3,
+    3
+  ],
+  "input_height": [
+    80,
+    40,
+    20,
+    80,
+    40,
+    20
+  ],
+  "input_width": [
+    80,
+    40,
+    20,
+    80,
+    40,
+    20
+  ],
+  "slice_depth": [
+    64,
+    64,
+    64,
+    3,
+    3,
+    3
+  ],
+  "slice_height": [
+    1,
+    1,
+    1,
+    80,
+    40,
+    20
+  ],
+  "slice_width": [
+    80,
+    40,
+    20,
+    80,
+    40,
+    20
+  ],
+  "caps": {
+    "sink_pads": [
+      {
+        "media_type": "application/vnd.simaai.tensor",
+        "params": [
+          {
+            "name": "format",
+            "type": "string",
+            "values": "MLA",
+            "json_field": null
+          },
+          {
+            "name": "data_type",
+            "type": "string",
+            "values": "(INT8, INT16, INT32), (INT8, INT16, INT32), (INT8, INT16, INT32), (INT8, INT16, INT32), (INT8, INT16, INT32), (INT8, INT16, INT32)",
+            "json_field": "data_type"
+          },
+          {
+            "name": "width",
+            "type": "int",
+            "values": "(1 - 4096), (1 - 4096), (1 - 4096), (1 - 4096), (1 - 4096), (1 - 4096)",
+            "json_field": "input_width"
+          },
+          {
+            "name": "height",
+            "type": "int",
+            "values": "(1 - 4096), (1 - 4096), (1 - 4096), (1 - 4096), (1 - 4096), (1 - 4096)",
+            "json_field": "input_height"
+          },
+          {
+            "name": "depth",
+            "type": "int",
+            "values": "(1 - 4096), (1 - 4096), (1 - 4096), (1 - 4096), (1 - 4096), (1 - 4096)",
+            "json_field": "input_depth"
+          },
+          {
+            "name": "slice_width",
+            "type": "int",
+            "values": "(1 - 4096), (1 - 4096), (1 - 4096), (1 - 4096), (1 - 4096), (1 - 4096)",
+            "json_field": "slice_width"
+          },
+          {
+            "name": "slice_height",
+            "type": "int",
+            "values": "(1 - 4096), (1 - 4096), (1 - 4096), (1 - 4096), (1 - 4096), (1 - 4096)",
+            "json_field": "slice_height"
+          },
+          {
+            "name": "slice_depth",
+            "type": "int",
+            "values": "(1 - 4096), (1 - 4096), (1 - 4096), (1 - 4096), (1 - 4096), (1 - 4096)",
+            "json_field": "slice_depth"
+          }
+        ]
+      }
+    ],
+    "src_pads": [
+      {
+        "media_type": "application/vnd.simaai.tensor",
+        "params": [
+          {
+            "name": "format",
+            "type": "string",
+            "values": "bbox",
+            "json_field": null
+          }
+        ]
+      }
+    ]
+  }
+}

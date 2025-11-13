@@ -1,0 +1,154 @@
+{
+  "graph_name": "detessdequant",
+  "cpu": "CVU",
+  "next_cpu": "APU",
+  "input_buffers": [
+    {
+      "memories": [
+        {
+          "segment_name": "mla_output_tensor",
+          "graph_input_name": "input_tensor"
+        }
+      ],
+      "name": "simaaiprocessmla_1"
+    }
+  ],
+  "output_memory_order": [
+    "output_tensor"
+  ],
+  "debug": "EVXX_DBG_DISABLED",
+  "batch_size": 1,
+  "num_in_tensor": 6,
+  "data_type": [
+    "INT8",
+    "INT8",
+    "INT8",
+    "INT8",
+    "INT8",
+    "INT8"
+  ],
+  "dq_scale": [
+    11.613269670102973,
+    10.794621964282886,
+    10.703589758639614,
+    488.73180652126814,
+    318.5776697531231,
+    280.52818444695487
+  ],
+  "dq_zp": [
+    -8,
+    2,
+    10,
+    -128,
+    -128,
+    -128
+  ],
+  "fp16_out_en": [
+    false,
+    false,
+    false,
+    false,
+    false,
+    false
+  ],
+  "input_depth": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+  ],
+  "input_height": [
+    80,
+    40,
+    20,
+    80,
+    40,
+    20
+  ],
+  "input_width": [
+    80,
+    40,
+    20,
+    80,
+    40,
+    20
+  ],
+  "input_channels": [
+    64,
+    64,
+    64,
+    2,
+    2,
+    2
+  ],
+  "output_format": [
+    "NDHWC",
+    "NDHWC",
+    "NDHWC",
+    "NDHWC",
+    "NDHWC",
+    "NDHWC"
+  ],
+  "slice_depth": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+  ],
+  "slice_height": [
+    1,
+    1,
+    1,
+    80,
+    40,
+    20
+  ],
+  "slice_width": [
+    80,
+    40,
+    20,
+    80,
+    40,
+    20
+  ],
+  "slice_channels": [
+    64,
+    64,
+    64,
+    2,
+    2,
+    2
+  ],
+  "caps": {
+    "sink_pads": [
+      {
+        "media_type": "application/vnd.simaai.tensor",
+        "params": [
+          {
+            "name": "format",
+            "type": "string",
+            "values": "MLA",
+            "json_field": null
+          }
+        ]
+      }
+    ],
+    "src_pads": [
+      {
+        "media_type": "application/vnd.simaai.tensor",
+        "params": [
+          {
+            "name": "format",
+            "type": "string",
+            "values": "DETESSDEQUANT",
+            "json_field": null
+          }
+        ]
+      }
+    ]
+  }
+}
